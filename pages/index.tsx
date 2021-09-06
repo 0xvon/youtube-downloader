@@ -19,7 +19,7 @@ const Home: NextPage = () => {
             <main className={styles.main}>
                 <h1 className={styles.title}>Welcome to CMS Templates!</h1>
                 <p>
-                    <Link href="/posts">go to posts</Link>
+                    <Link href="/news">go to news</Link>
                 </p>
             </main>
 

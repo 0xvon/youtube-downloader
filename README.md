@@ -12,6 +12,7 @@ CMS のテンプレです
 ## セットアップ
 
 ```
+$ cp .env.development.local{.sample,}
 $ yarn install
 $ yarn dev
 ```

@@ -4,7 +4,7 @@ import Head from "next/head"
 import Image from "next/image"
 import styles from "../../styles/Home.module.css"
 
-const Posts: NextPage = () => {
+const Post: NextPage = () => {
     const router = useRouter()
     const { pid } = router.query
     return (
@@ -20,7 +20,7 @@ const Posts: NextPage = () => {
 
             <main className={styles.main}>
                 <h1 className={styles.title}>
-                    Welcome to <a href="https://nextjs.org">Posts {pid}!</a>
+                    Welcome to <a href="https://nextjs.org">News {pid}!</a>
                 </h1>
             </main>
 
@@ -45,4 +45,4 @@ const Posts: NextPage = () => {
     )
 }
 
-export default Posts
+export default Post
