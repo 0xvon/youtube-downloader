@@ -7,7 +7,6 @@ interface Props {
     news: NewsEntity.News
 }
 
-// eslint-disable-next-line react/display-name
 export const NewsCell = forwardRef<HTMLAnchorElement, Props>((props, ref) => {
     return (
         <a href={`/news/${props.news.id}`} ref={ref} className={styles.card}>
