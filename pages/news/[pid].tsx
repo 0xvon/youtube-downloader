@@ -1,5 +1,5 @@
 import type { NextPage } from "next"
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import Head from "next/head"
 import Image from "next/image"
@@ -9,16 +9,19 @@ import { NewsAPI } from "../../core/microcms"
 
 const Post: NextPage = () => {
     const router = useRouter()
-    const { pid } = router.query
-
     const [news, setNews] = useState<NewsEntity.News | undefined>()
-    const refresh = useCallback(async () => {
-        const news = await NewsAPI.getNewsById(pid as string)
-        setNews(news)
-    }, [pid])
+
     useEffect(() => {
-        refresh()
-    }, [refresh])
+        if (router.asPath !== router.route) {
+            const refresh = async () => {
+                const news = await NewsAPI.getNewsById(
+                    router.query.pid as string
+                )
+                setNews(news)
+            }
+            refresh()
+        }
+    }, [router])
 
     return (
         <div className={styles.container}>

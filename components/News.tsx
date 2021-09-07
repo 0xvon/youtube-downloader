@@ -5,11 +5,11 @@ import { NewsCell } from "../components/NewsCell"
 
 const News = () => {
     const [news, setNews] = useState<NewsEntity.News[]>([])
-    const refresh = async () => {
-        const news = await NewsAPI.listNews()
-        setNews(news)
-    }
     useEffect(() => {
+        const refresh = async () => {
+            const news = await NewsAPI.listNews()
+            setNews(news)
+        }
         refresh()
     }, [])
 
