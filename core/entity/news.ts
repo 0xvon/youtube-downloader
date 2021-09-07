@@ -5,8 +5,8 @@ export type News = {
     title: string
     thumbnail: Image
     text: string
-    createdAt: Date
-    updatedAt: Date
-    publishedAt: Date
-    revisedAt: Date
+    createdAt: string
+    updatedAt: string
+    publishedAt: string
+    revisedAt: string
 }
