@@ -7,7 +7,7 @@ CMS のテンプレです
 | 言語               | TypeScript          |
 | Web フレームワーク | React.js<br>Next.js |
 | バックエンド       | microCMS            |
-| CSS フレームワーク | tailwindcss         |
+| CSS フレームワーク | Chakra UI           |
 
 ## セットアップ
 
